@@ -202,6 +202,23 @@ arvore hierarquia
     head -> meta,title
 
     body -> h1,p,div, etc
+_______________________________________________________________________________
+
+Podendo acessar por 
+ 
+Marca
+Id
+Nome 
+Classe
+querySeletor
+
+_______________________________________________________________________________
+
+Eventos DOM
+
+
+
+
 
 
 
