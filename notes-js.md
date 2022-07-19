@@ -216,9 +216,35 @@ _______________________________________________________________________________
 
 Eventos DOM
 
+Alguns eventos mais comuns sao:
+    
+    eventos de mouse- > mousedown, mouseup, clock dblcloc,mousemove,
+    mouseup,mousewhell, mouseout etc.
+    
+    eventos de toque-> touchstart, touchmove, touchend, touchcancel.
 
+    eventos de teclado-> keydown,keypress,keyup
 
+    eventos de formulario -> focus, blur, chance,submit
 
+    eventos de janela -> scrll, resize, hashchange, load, unload
+
+Alguns eventos sao especificos do dispotivo, como eventos de toque apenas para smartphones e laptop touchscreen,
+Ja os eventos de mouse sao disparados na maioria dos navegadores, o evento mouseover nao e disparada em smartphones
+
+E possivel adicionar listeners para os eventos de toque e de mouse para interface responder rapidamente a todos os dispositivos.
+Existem bibliotecas como FASTCLICK que descobre automaticamente quais eventos  esperar em cada dispotivo.
+
+____________________________________________________________________
+
+CONDICOES
+
+if (condicao){
+    true
+} else {
+    false
+}
+ 
 
 
 

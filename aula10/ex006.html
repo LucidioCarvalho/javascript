@@ -19,12 +19,14 @@
 
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
-        Interaja.. 
+    <div id="area">Interaja.. 
      </div>
 
      <script>   
     var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseleave', sair)
     
     function clicar(){
         a.innerText = 'Clicou'
