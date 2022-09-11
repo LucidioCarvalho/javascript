@@ -73,8 +73,8 @@ Formatando números:
 
 Var n1 = 1543.5
 
-n1.toFixed(2)                                                                              // Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses)
-n1.toLocaleString( ‘pt-br’,{style: ‘currecy’, currency: ‘BRL’} )    // Coloca o R$ na frente do numero (pode trocar entre outras                                                                                                                 moedas)
+n1.toFixed(2)   // Coloca em duas casas decimais (para colocar em mais ou menos casas troque o numero entre parênteses)
+n1.toLocaleString( ‘pt-br’,{style: ‘currecy’, currency: ‘BRL’} )    // Coloca o R$ na frente do numero (pode trocar entre outras moedas)
 n1.replace (‘.’, ‘,’)         // Troca o ponto pela virgula
 _______________________________________________________________________________
 
@@ -218,22 +218,24 @@ Eventos DOM
 
 Alguns eventos mais comuns sao:
     
-    eventos de mouse- > mousedown, mouseup, clock dblcloc,mousemove,
+    eventos de mouse- > mousedown, mouseup, click dblclick,mousemove,
     mouseup,mousewhell, mouseout etc.
     
     eventos de toque-> touchstart, touchmove, touchend, touchcancel.
 
     eventos de teclado-> keydown,keypress,keyup
 
-    eventos de formulario -> focus, blur, chance,submit
+    eventos de formulario -> focus, blur, change,submit
 
-    eventos de janela -> scrll, resize, hashchange, load, unload
+    eventos de janela -> scroll, resize, hashchange, load, unlo ad
 
 Alguns eventos sao especificos do dispotivo, como eventos de toque apenas para smartphones e laptop touchscreen,
 Ja os eventos de mouse sao disparados na maioria dos navegadores, o evento mouseover nao e disparada em smartphones
 
 E possivel adicionar listeners para os eventos de toque e de mouse para interface responder rapidamente a todos os dispositivos.
 Existem bibliotecas como FASTCLICK que descobre automaticamente quais eventos  esperar em cada dispotivo.
+
+
 
 ____________________________________________________________________
 
@@ -245,6 +247,96 @@ if (condicao){
     false
 }
  
+Uma condicao simples
+
+var vel = 66
+console.log(`A velicidade do seu carro e ${vel}KM/h`);
+if (vel >60 ){
+    console.log(`Seu carro esta a cima da velicidade permitida, MULTADO`);
+}
+console.log(`Digira com cuidado seu animal`);
+
+Uma condicao composta
+var pais = 'EUA'
+console.log(`Vivendo em ${pais}`)
+if (pais != 'Brasil'){
+    console.log('Voce é estrangeiro')
+}else{
+    console.log('Voce e Brasileiro')
+}
+
+function verificar() {
+            
+            var paistxt = document.getElementById('txtpais').value //utilizar o .value no final para pegar o valor digitado no campo ao invés do campo
+            var ver = document.querySelector('div#ver')
+            //var pais = (paistxt.value) // tbm é possível usar o valor em outra variável como ficou aqui, porém precisa trocar o nome da variável na condição if
+           
+            if (paistxt == 'Brasil') {
+                ver.innerHTML = '<p>Você é Brasileiro</p>'
+       }
+            else {
+                ver.innerHTML = '<p>Você é Estrangeiro</p>'
+
+
+CONDICOES ANINHADAS
+
+uma condicao composta dentro de outra
+
+var agora = new Date()
+var hora = agora.getHours()
+console.log(`Agora sao exatamente ${hora} horas`)
+if (hora <12){
+    console.log(`Bom dia`)
+} else if (hora <=18){
+    console.log(`Boa tarde`)
+}else {
+    console.log (`Boa noite`)
+}
+
+____________________________________________________________________
+
+CONDICAO MULTIPLA
+
+com comando SWITCH usado para valores pontuais, numeros inteiros e caracteres
+
+Como exemplo abaixo puxando dia da semana do sistema e mostrando no console
+
+
+var agora = new Date()
+var diaSem =  agora.getDay()
+
+console.log(diaSem)
+
+switch (diaSem) {
+    case 0: 
+    console.log(`Domingo`)
+    break
+    case 1:
+        console.log(`Segunda`)
+        break
+    case 2:
+        console.log(`Terca`)
+        break
+    case 3:
+        console.log(`Quarta`)
+        break
+    case 4 :
+        console.log(`Quinta`)
+        break
+    case 5 :
+        console.log(`Sexta`)
+        break
+    case 6:
+        console.log(`Sabado`)
+        break
+    default :
+    console.log(`Erro Dia invalido!`)
+    break
+    
+}
+
+
+____________________________________________________________________
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Voce é estrangeiro ou Brasileiro?</h1>
+    Digite o pais em que se encontra <input type="text" id="pais">
+    <input type="button" value="Verificar" onclick="Validando()">
+    
+    <div id = "res">Voce é de </div>
+
+    <script>
+        function Validando(){
+            var ps = window.document.getElementById("pais").value
+            var res = window.document.getElementById("res")
+           
+            if(ps == 'Brasil'){
+                res.innerHTML = `Voce e Brasileiro`
+            }
+            else{
+                res.innerHTML = `Tu e gringo de ${ps}`
+            }
+      
+        }
+        
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
+
+
