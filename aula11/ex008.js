@@ -1,3 +1,5 @@
+//Condicao simples
+
 var vel = 66
 console.log(`A velicidade do seu carro e ${vel}KM/h`);
 if (vel >60 ){

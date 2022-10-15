@@ -592,3 +592,77 @@ onselect	Uma seleção de texto é iniciada (para input ou textarea).
 onsubmit	Um formulário é submetido.
 onunload	Uma página está para ser descarregada.
 
+
+Estrutura de repeticao com variavel de controle
+
+ Exagno irregular
+
+Inicializacao 
+Teste logico
+Incremento
+
+Sendo teste logico verdadeiro ele vai executar o bloco ( varios Comandos) feito o bloco ele vai voltar fazendo um incremento  
+
+Codigo que conta pulando passos
+
+function executar () {
+    let inicio = document.getElementById('inicio')
+    let fim = document.getElementById('fim')
+    let passo = document.getElementById('passo')
+    let resultado = document.getElementById('resultado')
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert('Complete os dados')
+    }  else{
+        resultado.innerHTML ='Contando:'
+        let i = Number (inicio.value)
+        let f = Number (fim.value)
+        let p = Number (passo.value)
+        if (p == 0) {
+            p=1
+        }
+        if (i < f) {
+            for (let c = i; c <= f; c += p) {
+              resultado.innerHTML += `${c}`
+            }
+          } else {
+            for (let c = i; c >= f; c -= p) {
+              resultado.innerHTML += `${c}`
+            }
+
+
+_____________________________________________________________________________________________________________________
+
+Variaveis COMPOSTAS
+
+    -Variaveis compostas devem ser capazes de armazenar varios valores em uma mesma estrutura.
+
+    -Um ARRAY/VETOR é composto por elemento, é um par que agrupa um espaco da memoria, o valor colocado nele e um indice.
+    -Indice pode ser chamado de chave/key
+    -Um array é uma variavel que contem varios elementos.
+    -Cada elemento é composto por seu valor e por chava/key de identificacao.
+
+
+Exibindo valores no indice / Percurso em vetores
+
+let valores = [8,1,7,4,2,9]
+
+for (let pos=0; pos <valores.length; pos++){
+    console.log( `A posicao ${pos} tem o valor ${valores[pos]}`)
+}
+ 
+
+    -Simplificando vetores
+let valores = [8,1,7,4,2,9]
+
+for (let pos in valores){
+    console.log( `A posicao ${pos} tem o valor ${valores[pos]}`)
+}
+
+    -Buscando valores dentro de um ARRAY/VETOR
+
+let valores = [8,1,7,4,2,9]    
+let pos = num.indexof(2)
+
+o Valor esta na posicao 4
+
+ibm x3200 m2
