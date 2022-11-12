@@ -665,4 +665,21 @@ let pos = num.indexof(2)
 
 o Valor esta na posicao 4
 
-ibm x3200 m2
+
+________________________________________________________________________________________________________________________________
+
+FUNCOES JS
+
+    Sao acoes executadas assim que sao chamadas ou em decorrencia de algum evento.
+    Uma funcao pode recerber parametros e retornar um resultado.
+
+
+function parimpar(n){
+    if(n%2 ==0){
+        return 'par'
+    }else {
+        return 'Impar'
+    }
+}
+let res = parimpar(4) or console.log(parimpar(4))
+console.log(res)
