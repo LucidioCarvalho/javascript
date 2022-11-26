@@ -251,3 +251,117 @@ echo "Quem nasceu em $ano tem idade de $idade anos.";
 $tipo = ($idade >=18 && $idade<65)?"OBRIGATORIO":"NAO OBRIGATORIO";
 echo"E dessa forma seu voto e $tipo ";
 
+________________________________________________________________________________________________
+INTEGRACAO HTML + PHP
+   
+   
+ FORMULARIO
+
+
+No HTML indelx:
+
+<form method ="get" action="02idade.php">
+    Nome: <input type ="text" name="nome"/><br/>
+    Ano de Nascimento: <Input type="number" name="ano"/><br/>
+    <fieldset><legend>Sexo</legend>
+        <input type="radio" name="sexo" id="masc" value="homem" checked/>
+        <label for="masc">Masculino</label><br/>
+        <input type="radio" name="sexo" id="fem" value="mulher"/>
+        <label for="masc">Feminino</label>
+        </fieldset><br/>
+    <input type="submit"value="Envia"/>
+</form>
+
+Arquivo PHP com nome 02idade.php
+
+<?php
+$nome = isset ($_GET["nome"])?$_GET["nome"]: "Nao informado";
+$ano =$_GET["ano"];
+$sexo = $GET["sexo"];
+$idade = date ("Y") - $ano;
+echo"$nome e $sexo e tem $idade anos";
+
+<a href="02.exercicio.html">Voltar</a>
+
+
+>
+
+
+______________________________________________________________________________________________________________
+
+ESTRUTURA CONDICIONAL
+
+HTML
+<body>
+<div>
+    <form method="get"action= "exercicio01.php">
+    Ano de Nascimento:
+    <input type="number"placeholder="4 digitos"name="ano"/>
+    <input type="submit"value="Verificar" />
+    </form>
+
+
+</div>
+
+<?php
+
+
+$a = isset($_GET "ano")?$_GET "ano": 1900;
+i$= date ("Y") - $a;
+
+echo "Voce nasceu em $a e tera $i anos.
+if ($i >=18){
+    $v = "Ja pode votar";
+    $d = "Ja pode dirigir";
+}
+else{
+    $v ="Nao pode votar";
+    $d ="Nao pode dirigir";
+}
+echo "Com essa idade voce $ v e tambem $d";
+
+
+        CONDICOES ANINHADAS
+
+
+<?php
+
+$a = isset($_GET "ano")?$_GET "ano": 1900;
+i$= date ("Y") - $a;
+
+echo "Voce nasceu em $a e tera $i anos.
+if ($i <16) {
+    $tipoVoto = "Nao vota";
+}
+else {
+    if (($i >=16 && $i <18) || ($i >65)){
+        $tipoVoto= "Voto Opcional";
+    }
+    else{
+        $tipoVoto="VOTO OBRIGATORIO";
+    }
+}
+echo "Para essa idade, $tipoVoto";
+
+?>
+
+Diminuindo CODIGO com ELSEIF
+
+ $a = isset($_GET "ano")?$_GET "ano": 1900;
+i$= date ("Y") - $a;
+
+echo "Voce nasceu em $a e tera $i anos.
+if ($i <16) {
+    $tipoVoto = "Nao vota";
+}
+elseif (($i >=16 && $i <18) || ($i >65)){
+        $tipoVoto= "Voto Opcional";
+    }
+    else{
+        $tipoVoto="VOTO OBRIGATORIO";
+    }
+
+echo "Para essa idade, $tipoVoto";
+
+
+
