@@ -268,7 +268,7 @@ No HTML indelx:
         <label for="masc">Masculino</label><br/>
         <input type="radio" name="sexo" id="fem" value="mulher"/>
         <label for="masc">Feminino</label>
-        </fieldset><br/>
+        </fieldset><br/>  
     <input type="submit"value="Envia"/>
 </form>
 
@@ -362,6 +362,4 @@ elseif (($i >=16 && $i <18) || ($i >65)){
     }
 
 echo "Para essa idade, $tipoVoto";
-
-
 
